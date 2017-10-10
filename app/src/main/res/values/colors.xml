@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ MIT License
+  ~ Copyright (c) 2017. Attiq ur Rehman
+  ~ Permission is hereby granted, free of charge, to any person obtaining
+  ~ a copy of this software and associated documentation files (the "Software"),
+  ~ to deal in the Software without restriction, including without limitation the
+  ~ rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is furnished
+  ~ to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED
+  ~ "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+  ~ BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+  ~ PARTICULAR PURPOSE AND NON INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS
+  ~ OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+  ~ ARISING FROM,OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+  ~ OR OTHER DEALINGS IN THE SOFTWARE.
+  -->
+
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#303d4b</color>
+
+    <!--  Simple Colors
+  -->
+    <color name="dark_blue">#2E3944</color>
+    <color name="blue">#0000FF</color>
+    <color name="fb_blue">#3B5998</color>
+    <color name="twitter_blue">#00aced</color>
+    <color name="instagram_blue">#517fa4</color>
+    <color name="youtub_red">#bb0000</color>
+    <color name="black_shade1">#b2b2b2</color>
+    <color name="black_shade2">#cccccc</color>
+
+    <color name="hint_alpha_white">#80FFFFFF</color>
+    <color name="hint_extra_alpha_white">#1aFFFFFF</color>
+
+    <color name="gray">#757374</color>
+    <color name="backgound_blue_color">#1abfe1</color>
+    <color name="employee_purple_text_color">#691a40</color>
+
+
+    <color name="grey_service_btn">#797878</color>
+    <color name="grey_bill_text">#414141</color>
+    <color name="blue_bils_exempt">#1abfe1</color>
+    <color name="red_bils_high">#ed1b24</color>
+    <color name="red">#f00</color>
+    <color name="cell_grey">#f0f3f6</color>
+    <color name="cell_border">#979696</color>
+    <color name="semi_transparent">#77000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="light_grey">#b8b8b8</color>
+    <color name="c_light_blue">#1abfe1</color>
+    <color name="c_dark_blue">#0953A4</color>
+    <color name="black">#000000</color>
+    <color name="gold">#AF8A4B</color>
+    <color name="hint_color">#BDBDBD</color>
+    <color name="bill_text_color">#E11A44</color>
+    <color name="red_bg_emp_dir">#FAB4B4</color>
+
+    <!--  App specific colors-->
+
+    <color name="light_brown">#CC8634</color>
+
+    <color name="gold_yellow">#C89632</color>
+    <color name="grey">#e5e6e5</color>
+    <color name="category_list_grey">#646464</color>
+    <color name="dark_grey">#414141</color>
+    <color name="cream">#E7E7E7</color>
+    <color name="white">#ffffff</color>
+    <color name="sky_blue">#05b3d6</color>
+    <color name="lite_green">#82FA58</color>
+    <color name="lite_yellow">#F6FCE8</color>
+    <color name="grey_text">#777878</color>
+    <color name="green">#4A9E2A</color>
+    <color name="grid_bg">#FFFFFFFF</color>
+    <color name="grid_border">#FFC6C6C6</color>
+    <color name="purple">#FF00CC</color>
+    <color name="grey_days">#78797A</color>
+
+    <color name="base_blue_light">#1A516F</color>
+    <color name="base_blue_holo">#7bbbd9</color>
+    <color name="translucent">#25000000</color>
+    <color name="holo_blue">#FF33B5E5</color>
+
+    <color name="progress_start">#B31025</color>
+    <color name="progress_end">#797B79</color>
+    <color name="tb_off_color">#000000</color>
+    <color name="tb_on_color">#32005C</color>
+    <color name="application_text_color">#3C3C3C</color>
+    <color name="dummy_color_clubs_firsthand_background">#B4A68F</color>
+    <color name="application_text_color_sub_headings">#B9B9B9</color>
+    <color name="application_clubs_sports_detail_screen_text">#505050</color>
+    <color name="application_purple">#993399</color>
+    <color name="settings_text_color">#BDBDBD</color>
+    <color name="settings_text_heading_color">#8E8E8E</color>
+    <color name="light_grey_hint_skip_texts">#9B9B9B</color>
+    <color name="light_black">#555555</color>
+    <color name="divider_color">#EAEAEA</color>
+    <color name="application_blue">#3B6AA9</color>-->
+
+    <color name="filter_map_circle">#253243</color>
+    <color name="toolbar_background">#303d4b</color>
+
+    <color name="filter_map_circle_tint">#80253243</color>
+    <color name="notification_bg_grey">#f3f3f3</color>
+    <color name="chart_green">#80c342</color>
+    <color name="radio_group_selected">#2cc55e</color>
+    <color name="radio_group_unselected">#FFE96A74</color>
+    <color name="radio_group_selected_blue">#3e4a5a</color>
+
+    <color name="radio_group_selected_green">#44B688</color>
+    <color name="button_green">#44B688</color>
+
+    <color name="button_red">#ED1B24</color>
+    <color name="suggestion_bg">#324356</color>
+
+    <color name="comment_color">#FFFEFB02</color>
+    <color name="delete_color">#FFE96A74</color>
+    <color name="section_color">#FF9A6734</color>
+    <color name="yes_border_color">#0ca5b8</color>
+    <color name="no_border_color">#ed6973</color>
+    <color name="segment_color_selected">#009688</color>
+    <color name="segment_color_unselected">#80c342</color>
+
+    <color name="text_tab_selector">#5C6E86</color>
+    <color name="text_purple">#149FB4</color>
+
+    <color name="bg_login_overlay">#314255</color>
+
+    <!-- Color of Views-->
+    <color name="edit_text_view">#5d636a</color>
+    <color name="text_view">#a9a9a9</color>
+    <color name="bluish_text_view">#149cb0</color>
+    <color name="general_text_view">#f6faff</color>
+    <color name="button_text_color">#ffff0a</color>
+    <color name="dropdown_color">#b2b7be</color>
+    <color name="background_dropdown">#253243</color>
+    <color name="radio_yes">#44B688</color>
+    <color name="radio_no">#FFE96A74</color>
+    <color name="button_color">#314255</color>
+    <color name="title_color">#2b78e4</color>
+    <color name="job_completed_background">#bf9000</color>
+    <color name="job_row_color">#ffff00</color>
+    <color name="start_date_row_color">#b6d7a8</color>
+    <color name="end_date_row_color">#e06666</color>
+
+    <color name="bg_gray">#fff2f2f2</color>
+    <color name="transparent_black">#55000000</color>
+    <color name="divider_gray_menu">#ff4B4A50</color>
+    <color name="divider_black_menu">#ff28292C</color>
+
+    <color name="active_color">#741b47</color>
+    <color name="future_color">#597eaa</color>
+    <color name="past_color">#999999</color>
+    <color name="active_text_color">#085394</color>
+    <color name="future_text_color">#45818e</color>
+    <color name="past_text_color">#b45f06</color>
+    <color name="job_card_color">#0c343d</color>
+    <color name="job_card_border_color">#274e13</color>
+    <color name="job_selected_switch_color">#FF00FF00</color>
+    <color name="scan_header">#085394</color>
+    <color name="scanner_background">#9fc5f8</color>
+
+    <color name="cell_value_label_color">#085394</color>
+
+    <color name="app_widget_color">#8FD7F7</color>
+    <color name="card_color">#68B6F4</color>
+</resources>

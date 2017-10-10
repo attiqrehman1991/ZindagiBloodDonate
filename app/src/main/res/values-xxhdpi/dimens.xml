@@ -1,0 +1,162 @@
+<!--
+  ~ MIT License
+  ~ Copyright (c) 2017. Attiq ur Rehman
+  ~ Permission is hereby granted, free of charge, to any person obtaining
+  ~ a copy of this software and associated documentation files (the "Software"),
+  ~ to deal in the Software without restriction, including without limitation the
+  ~ rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is furnished
+  ~ to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED
+  ~ "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+  ~ BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+  ~ PARTICULAR PURPOSE AND NON INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS
+  ~ OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+  ~ ARISING FROM,OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+  ~ OR OTHER DEALINGS IN THE SOFTWARE.
+  -->
+
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="logo_height">55dp</dimen>
+    <dimen name="logo_width">90dp</dimen>
+
+    <dimen name="tabs_height">50dp</dimen>
+
+    <dimen name="list_header_height">50dp</dimen>
+    <dimen name="list_container_height">200dp</dimen>
+
+    <dimen name="tab_image_dimen">20dp</dimen>
+
+    <dimen name="field_height">55dp</dimen>
+
+    <dimen name="x1">3dp</dimen>
+    <dimen name="x2">6dp</dimen>
+    <dimen name="x3">9dp</dimen>
+    <dimen name="x4">12dp</dimen>
+    <dimen name="x5">15dp</dimen>
+    <dimen name="x6">18dp</dimen>
+    <dimen name="x7">21dp</dimen>
+    <dimen name="x8">24dp</dimen>
+    <dimen name="x9">27dp</dimen>
+    <dimen name="x10">30dp</dimen>
+    <dimen name="x11">33dp</dimen>
+    <dimen name="x12">36dp</dimen>
+    <dimen name="x13">39dp</dimen>
+    <dimen name="x14">42dp</dimen>
+    <dimen name="x15">45dp</dimen>
+    <dimen name="x16">48dp</dimen>
+    <dimen name="x17">51dp</dimen>
+    <dimen name="x18">54dp</dimen>
+    <dimen name="x19">57dp</dimen>
+    <dimen name="x20">60dp</dimen>
+    <dimen name="x21">63dp</dimen>
+    <dimen name="x22">66dp</dimen>
+    <dimen name="x23">69dp</dimen>
+    <dimen name="x24">72dp</dimen>
+    <dimen name="x25">75dp</dimen>
+    <dimen name="x26">78dp</dimen>
+    <dimen name="x27">81dp</dimen>
+    <dimen name="x28">84dp</dimen>
+    <dimen name="x29">87dp</dimen>
+    <dimen name="x30">90dp</dimen>
+    <dimen name="x31">93dp</dimen>
+    <dimen name="x32">96dp</dimen>
+    <dimen name="x33">99dp</dimen>
+    <dimen name="x34">102dp</dimen>
+    <dimen name="x35">105dp</dimen>
+    <dimen name="x36">108dp</dimen>
+    <dimen name="x37">111dp</dimen>
+    <dimen name="x38">114dp</dimen>
+    <dimen name="x39">117dp</dimen>
+    <dimen name="x40">120dp</dimen>
+    <dimen name="x41">123dp</dimen>
+    <dimen name="x42">126dp</dimen>
+    <dimen name="x43">129dp</dimen>
+    <dimen name="x44">132dp</dimen>
+    <dimen name="x45">135dp</dimen>
+    <dimen name="x46">138dp</dimen>
+    <dimen name="x47">141dp</dimen>
+    <dimen name="x48">144dp</dimen>
+    <dimen name="x49">147dp</dimen>
+    <dimen name="x50">150dp</dimen>
+    <dimen name="x51">153dp</dimen>
+    <dimen name="x52">156dp</dimen>
+    <dimen name="x53">159dp</dimen>
+    <dimen name="x54">162dp</dimen>
+    <dimen name="x55">165dp</dimen>
+    <dimen name="x56">168dp</dimen>
+    <dimen name="x57">171dp</dimen>
+    <dimen name="x58">174dp</dimen>
+    <dimen name="x59">177dp</dimen>
+    <dimen name="x60">180dp</dimen>
+    <dimen name="x61">183dp</dimen>
+    <dimen name="x62">186dp</dimen>
+    <dimen name="x63">189dp</dimen>
+    <dimen name="x64">192dp</dimen>
+    <dimen name="x65">195dp</dimen>
+    <dimen name="x66">198dp</dimen>
+    <dimen name="x67">201dp</dimen>
+    <dimen name="x68">204dp</dimen>
+    <dimen name="x69">207dp</dimen>
+    <dimen name="x70">210dp</dimen>
+    <dimen name="x71">213dp</dimen>
+    <dimen name="x72">216dp</dimen>
+    <dimen name="x73">219dp</dimen>
+    <dimen name="x74">222dp</dimen>
+    <dimen name="x75">225dp</dimen>
+    <dimen name="x76">228dp</dimen>
+    <dimen name="x77">231dp</dimen>
+    <dimen name="x78">234dp</dimen>
+    <dimen name="x79">237dp</dimen>
+    <dimen name="x80">240dp</dimen>
+    <dimen name="x85">255dp</dimen>
+    <dimen name="x90">270dp</dimen>
+    <dimen name="x95">285dp</dimen>
+    <dimen name="x100">300dp</dimen>
+    <dimen name="x110">330dp</dimen>
+    <dimen name="x120">360dp</dimen>
+    <dimen name="x125">375dp</dimen>
+    <dimen name="x130">390dp</dimen>
+    <dimen name="x140">420dp</dimen>
+    <dimen name="x150">450dp</dimen>
+    <dimen name="x160">480dp</dimen>
+    <dimen name="x180">540dp</dimen>
+    <dimen name="x190">570dp</dimen>
+    <dimen name="x200">600dp</dimen>
+    <dimen name="x220">660dp</dimen>
+    <dimen name="x230">690dp</dimen>
+    <dimen name="x250">750dp</dimen>
+    <dimen name="x280">840dp</dimen>
+    <dimen name="x300">900dp</dimen>
+    <dimen name="x320">960dp</dimen>
+    <dimen name="x325">975dp</dimen>
+    <dimen name="x330">990dp</dimen>
+    <dimen name="x350">1050dp</dimen>
+
+
+    <dimen name="s6">8dp</dimen>
+    <dimen name="s7">10dp</dimen>
+    <dimen name="s8">13sp</dimen>
+    <dimen name="s9">15sp</dimen>
+    <dimen name="s10">16sp</dimen>
+    <dimen name="s11">18sp</dimen>
+    <dimen name="s12">20sp</dimen>
+    <dimen name="s13">22sp</dimen>
+    <dimen name="s14">23sp</dimen>
+    <dimen name="s15">25sp</dimen>
+    <dimen name="s16">26sp</dimen>
+    <dimen name="s17">28sp</dimen>
+    <dimen name="s18">30sp</dimen>
+    <dimen name="s19">31dp</dimen>
+    <dimen name="s20">33dp</dimen>
+    <dimen name="s25">41dp</dimen>
+    <dimen name="s30">50dp</dimen>
+
+</resources>

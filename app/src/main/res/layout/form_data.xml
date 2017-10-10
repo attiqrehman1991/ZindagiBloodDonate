@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ MIT License
+  ~ Copyright (c) 2017. Attiq ur Rehman
+  ~ Permission is hereby granted, free of charge, to any person obtaining
+  ~ a copy of this software and associated documentation files (the "Software"),
+  ~ to deal in the Software without restriction, including without limitation the
+  ~ rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is furnished
+  ~ to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED
+  ~ "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+  ~ BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+  ~ PARTICULAR PURPOSE AND NON INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS
+  ~ OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+  ~ ARISING FROM,OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+  ~ OR OTHER DEALINGS IN THE SOFTWARE.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.zindagi.blood.donate.base.view.AnyTextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/name" />
+
+    <com.zindagi.blood.donate.base.view.AnyEditText
+        android:id="@+id/ed_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_name"
+        app:typeface="@string/helvetica_light" />
+
+    <com.zindagi.blood.donate.base.view.AnyTextView
+        android:id="@+id/tv_cell_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cell_number" />
+
+    <com.zindagi.blood.donate.base.view.AnyEditText
+        android:id="@+id/ed_cell_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_cell_number"
+        android:inputType="phone"
+        app:typeface="@string/helvetica_light" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.zindagi.blood.donate.base.view.AnyTextView
+                android:id="@+id/tv_is_on_break"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/is_on_break" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupBreak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/radiobutton_background_green"
+                android:divider="@drawable/radiogroup_drawer_green"
+                android:orientation="horizontal"
+                android:showDividers="middle">
+
+                <RadioButton
+                    android:id="@+id/yesSwitchBreak"
+                    style="@style/RadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/radiogroup_drawer_green"
+                    android:checked="true"
+                    android:text="@string/yes" />
+
+                <RadioButton
+                    android:id="@+id/noSwitchBreak"
+                    style="@style/RadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/radiogroup_drawer_green"
+                    android:text="@string/no" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.zindagi.blood.donate.base.view.AnyTextView
+                android:id="@+id/tv_is_activated"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/is_activated" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupActivated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/radiobutton_background_green"
+                android:divider="@drawable/radiogroup_drawer_green"
+                android:orientation="horizontal"
+                android:showDividers="middle">
+
+                <RadioButton
+                    android:id="@+id/yesSwitchActivated"
+                    style="@style/RadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/radiogroup_drawer_green"
+                    android:checked="true"
+                    android:text="@string/yes" />
+
+                <RadioButton
+                    android:id="@+id/noSwitchActivated"
+                    style="@style/RadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/radiogroup_drawer_green"
+                    android:text="@string/no" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.zindagi.blood.donate.base.view.AnyTextView
+        android:id="@+id/tv_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/address" />
+
+    <com.zindagi.blood.donate.base.view.AnyEditText
+        android:id="@+id/ed_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_address"
+        android:inputType="textPostalAddress"
+        app:typeface="@string/helvetica_light" />
+
+    <com.zindagi.blood.donate.base.view.AnyTextView
+        android:id="@+id/tv_blood_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/blood_group" />
+
+    <Spinner
+        android:id="@+id/spinner_blood_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.zindagi.blood.donate.base.view.AnyTextView
+        android:id="@+id/tv_nic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/nic" />
+
+    <com.zindagi.blood.donate.base.view.AnyEditText
+        android:id="@+id/ed_nic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_nic"
+        android:inputType="number"
+        app:typeface="@string/helvetica_light" />
+
+    <com.zindagi.blood.donate.base.view.AnyTextView
+        android:id="@+id/tv_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/email" />
+
+    <com.zindagi.blood.donate.base.view.AnyEditText
+        android:id="@+id/ed_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        app:typeface="@string/helvetica_light" />
+
+    <com.zindagi.blood.donate.base.view.AnyTextView
+        android:id="@+id/tv_duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/preferred_duration" />
+
+    <com.zindagi.blood.donate.base.view.AnyEditText
+        android:id="@+id/ed_duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_preferred_duration"
+        android:inputType="number"
+        app:typeface="@string/helvetica_light" />
+
+    <com.zindagi.blood.donate.base.view.AnyTextView
+        android:id="@+id/tv_added_by"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/added_by" />
+
+    <com.zindagi.blood.donate.base.view.AnyEditText
+        android:id="@+id/ed_added_by"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        app:typeface="@string/helvetica_light" />
+
+    <com.zindagi.blood.donate.base.view.AnyTextView
+        android:id="@+id/tv_verified_by"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/verified_by" />
+
+    <com.zindagi.blood.donate.base.view.AnyEditText
+        android:id="@+id/ed_verified_by"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        app:typeface="@string/helvetica_light" />
+</LinearLayout>

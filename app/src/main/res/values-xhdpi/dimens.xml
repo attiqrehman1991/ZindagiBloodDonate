@@ -1,0 +1,165 @@
+<!--
+  ~ MIT License
+  ~ Copyright (c) 2017. Attiq ur Rehman
+  ~ Permission is hereby granted, free of charge, to any person obtaining
+  ~ a copy of this software and associated documentation files (the "Software"),
+  ~ to deal in the Software without restriction, including without limitation the
+  ~ rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is furnished
+  ~ to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED
+  ~ "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+  ~ BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+  ~ PARTICULAR PURPOSE AND NON INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS
+  ~ OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+  ~ ARISING FROM,OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+  ~ OR OTHER DEALINGS IN THE SOFTWARE.
+  -->
+
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="logo_height">60dp</dimen>
+    <dimen name="logo_width">90dp</dimen>
+
+    <dimen name="tabs_height">40dp</dimen>
+    <dimen name="tab_image_dimen">20dp</dimen>
+
+
+    <dimen name="field_height">40dp</dimen>
+
+    <dimen name="x1">2dp</dimen>
+    <dimen name="negx2">-4dp</dimen>
+    <dimen name="x2">4dp</dimen>
+    <dimen name="x3">6dp</dimen>
+    <dimen name="x4">8dp</dimen>
+    <dimen name="x5">10dp</dimen>
+    <dimen name="x6">12dp</dimen>
+    <dimen name="x7">14dp</dimen>
+    <dimen name="x8">16dp</dimen>
+    <dimen name="x9">18dp</dimen>
+    <dimen name="x10">20dp</dimen>
+    <dimen name="x11">22dp</dimen>
+    <dimen name="x12">24dp</dimen>
+    <dimen name="x13">26dp</dimen>
+    <dimen name="x14">28dp</dimen>
+    <dimen name="x15">30dp</dimen>
+    <dimen name="x16">32dp</dimen>
+    <dimen name="x17">34dp</dimen>
+    <dimen name="x18">36dp</dimen>
+    <dimen name="x19">38dp</dimen>
+    <dimen name="x20">40dp</dimen>
+    <dimen name="x21">42dp</dimen>
+    <dimen name="x22">44dp</dimen>
+    <dimen name="x23">46dp</dimen>
+    <dimen name="x24">48dp</dimen>
+    <dimen name="x25">50dp</dimen>
+    <dimen name="x26">52dp</dimen>
+    <dimen name="x27">54dp</dimen>
+    <dimen name="x28">56dp</dimen>
+    <dimen name="x29">58dp</dimen>
+    <dimen name="x30">60dp</dimen>
+    <dimen name="x31">62dp</dimen>
+    <dimen name="x32">64dp</dimen>
+    <dimen name="x33">66dp</dimen>
+    <dimen name="x34">68dp</dimen>
+    <dimen name="x35">70dp</dimen>
+    <dimen name="x36">72dp</dimen>
+    <dimen name="x37">74dp</dimen>
+    <dimen name="x38">76dp</dimen>
+    <dimen name="x39">78dp</dimen>
+    <dimen name="x40">80dp</dimen>
+    <dimen name="x41">82dp</dimen>
+    <dimen name="x42">84dp</dimen>
+    <dimen name="x43">86dp</dimen>
+    <dimen name="x44">88dp</dimen>
+    <dimen name="x45">90dp</dimen>
+    <dimen name="x46">92dp</dimen>
+    <dimen name="x47">94dp</dimen>
+    <dimen name="x48">96dp</dimen>
+    <dimen name="x49">98dp</dimen>
+    <dimen name="x50">100dp</dimen>
+    <dimen name="x51">102dp</dimen>
+    <dimen name="x52">104dp</dimen>
+    <dimen name="x53">106dp</dimen>
+    <dimen name="x54">108dp</dimen>
+    <dimen name="x55">110dp</dimen>
+    <dimen name="x56">112dp</dimen>
+    <dimen name="x57">114dp</dimen>
+    <dimen name="x58">116dp</dimen>
+    <dimen name="x59">118dp</dimen>
+    <dimen name="x60">120dp</dimen>
+    <dimen name="x61">122dp</dimen>
+    <dimen name="x62">124dp</dimen>
+    <dimen name="x63">126dp</dimen>
+    <dimen name="x64">128dp</dimen>
+    <dimen name="x65">130dp</dimen>
+    <dimen name="x66">132dp</dimen>
+    <dimen name="x67">134dp</dimen>
+    <dimen name="x68">136dp</dimen>
+    <dimen name="x69">138dp</dimen>
+    <dimen name="x70">140dp</dimen>
+    <dimen name="x71">142dp</dimen>
+    <dimen name="x72">144dp</dimen>
+    <dimen name="x73">146dp</dimen>
+    <dimen name="x74">148dp</dimen>
+    <dimen name="x75">150dp</dimen>
+    <dimen name="x76">152dp</dimen>
+    <dimen name="x77">154dp</dimen>
+    <dimen name="x78">156dp</dimen>
+    <dimen name="x79">158dp</dimen>
+    <dimen name="x80">160dp</dimen>
+    <dimen name="x85">170dp</dimen>
+    <dimen name="x90">180dp</dimen>
+    <dimen name="x95">190dp</dimen>
+    <dimen name="x100">200dp</dimen>
+    <dimen name="x110">220dp</dimen>
+    <dimen name="x120">240dp</dimen>
+    <dimen name="x125">250dp</dimen>
+    <dimen name="x130">260dp</dimen>
+    <dimen name="x140">280dp</dimen>
+    <dimen name="x150">300dp</dimen>
+    <dimen name="x160">320dp</dimen>
+    <dimen name="x180">360dp</dimen>
+    <dimen name="x190">380dp</dimen>
+    <dimen name="x200">400dp</dimen>
+    <dimen name="x220">440dp</dimen>
+    <dimen name="x230">460dp</dimen>
+    <dimen name="x250">500dp</dimen>
+    <dimen name="x280">560dp</dimen>
+    <dimen name="x300">600dp</dimen>
+    <dimen name="x320">640dp</dimen>
+    <dimen name="x325">650dp</dimen>
+    <dimen name="x330">660dp</dimen>
+    <dimen name="x350">700dp</dimen>
+
+
+    <dimen name="s6">8dp</dimen>
+    <dimen name="s7">10dp</dimen>
+    <dimen name="s8">13dp</dimen>
+    <dimen name="s9">15sp</dimen>
+    <dimen name="s10">16sp</dimen>
+    <dimen name="s11">18sp</dimen>
+    <dimen name="s12">20dp</dimen>
+    <dimen name="s13">22dp</dimen>
+    <dimen name="s14">23dp</dimen>
+    <dimen name="s15">25dp</dimen>
+    <dimen name="s16">26dp</dimen>
+    <dimen name="s17">28dp</dimen>
+    <dimen name="s18">30dp</dimen>
+    <dimen name="s19">31dp</dimen>
+    <dimen name="s20">33dp</dimen>
+    <dimen name="s25">41dp</dimen>
+    <dimen name="s30">50dp</dimen>
+
+    <dimen name="jobs_text_size">11sp</dimen>
+
+    <dimen name="sp12">12sp</dimen>
+
+
+</resources>
