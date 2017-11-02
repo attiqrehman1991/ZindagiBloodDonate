@@ -21,29 +21,23 @@
 
 package com.zindagi.blood.donate.login;
 
-import com.zindagi.blood.donate.base.ui.BasicInterface;
-import com.zindagi.blood.donate.login.model.UserInfo;
+import org.json.JSONObject;
 
 /**
- * Created by Attiq ur Rehman on 08 Oct 2017.
- * Senior Software Engineer at Systems Ltd
- * attiq.ur.rehman1991@gmail.com
+ * Created by Chilindo User on 11/2/2017 AD.
  */
 
-public interface LoginView extends BasicInterface {
-    void successfullyLoggedIn(Object object);
+public class LoginRetrofitService implements LoginService {
+    @Override
+    public void doLogin(PostServiceCallBack callBack, String email, String password) {
+        try {
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.put("name", "name");
+            jsonObject.put("age", "27");
 
-    String getPassword();
-
-    String getEmail();
-
-    void requiredPassword();
-
-    void requiredEmail();
-
-    void emailNotValid();
-
-    void passwordNotValid();
-
-    void loginResults(UserInfo userInfo);
+            callBack.onSuccess(jsonObject);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

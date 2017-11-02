@@ -27,7 +27,7 @@ package com.zindagi.blood.donate.login;
  * attiq.ur.rehman1991@gmail.com
  */
 public interface LoginPresenter {
-    void setView(LoginView view);
+    void setView(LoginView view, LoginService loginService);
 
     void checkAlreadyLoggedIn();
 

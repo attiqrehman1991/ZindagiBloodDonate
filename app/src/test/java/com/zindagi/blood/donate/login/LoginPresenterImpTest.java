@@ -24,6 +24,7 @@ package com.zindagi.blood.donate.login;
 import com.zindagi.blood.donate.R;
 import com.zindagi.blood.donate.login.model.LoginResponse;
 
+import org.json.JSONObject;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -43,12 +44,14 @@ public class LoginPresenterImpTest {
 
     @Mock
     LoginView view;
+    @Mock
+    LoginService service;
     LoginPresenterImp presenter;
 
     @Before
     public void setUp() throws Exception {
-        this.presenter= new LoginPresenterImp();
-        this.presenter.setView(view);
+        this.presenter = new LoginPresenterImp();
+        this.presenter.setView(view, service);
     }
 
     @Test
@@ -115,11 +118,15 @@ public class LoginPresenterImpTest {
         verify(view).passwordNotValid();
     }
 
+    @Mock
+    JSONObject jsonObject;
+
     @Test
     public void test034() throws Exception {
         when(view.getEmail()).thenReturn("attiq@gmail.com");
         when(view.getPassword()).thenReturn("mkyong1A@");
         presenter.attemptLogin();
-        verify(view).successfullyLoggedIn();
+
+        verify(view).successfullyLoggedIn(jsonObject);
     }
 }

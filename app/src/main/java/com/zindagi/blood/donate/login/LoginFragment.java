@@ -39,6 +39,8 @@ import com.zindagi.blood.donate.base.view.AnyTextView;
 import com.zindagi.blood.donate.home.HomeFragment;
 import com.zindagi.blood.donate.login.model.UserInfo;
 
+import org.json.JSONObject;
+
 import javax.inject.Inject;
 
 /**
@@ -51,6 +53,7 @@ public class LoginFragment extends BaseFragment implements LoginView {
 
     @Inject
     LoginPresenter presenter;
+    LoginService loginService;
     private AnyTextView tv_forget;
     private AnyTextView tv_sign_up;
     private AnyEditText et_email;
@@ -68,7 +71,7 @@ public class LoginFragment extends BaseFragment implements LoginView {
     }
 
     @Override
-    public void successfullyLoggedIn() {
+    public void successfullyLoggedIn(Object object) {
         Toast.makeText(activity, getString(R.string.successfully_logged_in), Toast.LENGTH_SHORT).show();
     }
 
@@ -139,7 +142,7 @@ public class LoginFragment extends BaseFragment implements LoginView {
 
     @Override
     public void fragmentData(View parent, Bundle savedInstanceState) {
-        presenter.setView(this);
+        presenter.setView(this, loginService);
         presenter.checkAlreadyLoggedIn();
     }
 
