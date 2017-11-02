@@ -22,6 +22,7 @@
 package com.zindagi.blood.donate.login.mvp;
 
 import com.zindagi.blood.donate.R;
+import com.zindagi.blood.donate.admin.model.User;
 import com.zindagi.blood.donate.database.HospitalTable;
 import com.zindagi.blood.donate.database.NotificationTable;
 import com.zindagi.blood.donate.database.UserProfileTable;
@@ -33,6 +34,8 @@ import com.zindagi.blood.donate.login.model.LoginRequest;
 import com.zindagi.blood.donate.login.model.UserInfo;
 import com.zindagi.blood.donate.notification.model.Notification;
 import com.zindagi.blood.donate.requestBlood.model.Hospital;
+
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -101,6 +104,15 @@ public class LoginPresenterImp implements LoginPresenter {
         interactor.doLogin(new Interactor.InteractorCallBack() {
             @Override
             public void onSuccess(Object posts) {
+                try {
+                    JSONObject jsonObject = (JSONObject) posts;
+                    User user = new User();
+                    user.setName(jsonObject.getString("name"));
+                    user.setCell_Number(jsonObject.getString("age"));
+                    view.setUser(user);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
                 view.successfullyLoggedIn();
             }
 

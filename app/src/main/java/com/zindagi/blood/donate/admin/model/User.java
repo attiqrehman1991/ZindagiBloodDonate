@@ -31,4 +31,19 @@ public class User {
     String Name;
     String Cell_Number;
 
+    public String getName() {
+        return Name;
+    }
+
+    public void setName(String name) {
+        Name = name;
+    }
+
+    public String getCell_Number() {
+        return Cell_Number;
+    }
+
+    public void setCell_Number(String cell_Number) {
+        Cell_Number = cell_Number;
+    }
 }

@@ -72,6 +72,14 @@ public class LoginFragment extends BaseFragment implements LoginView {
     }
 
     @Override
+    public void setUser(User user) {
+        if (user == null)
+            Toast.makeText(activity, "user null", Toast.LENGTH_SHORT).show();
+        else
+            Toast.makeText(activity, user.getName(), Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
     public void successfullyLoggedIn() {
         Toast.makeText(activity, getString(R.string.successfully_logged_in), Toast.LENGTH_SHORT).show();
     }

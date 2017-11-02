@@ -43,6 +43,8 @@ public interface LoginView extends BasicInterface {
 
     String getEmail();
 
+    void setUser(User user);
+
     Activity getActivity();
 
     void requiredPassword();

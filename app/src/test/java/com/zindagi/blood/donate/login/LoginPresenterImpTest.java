@@ -46,8 +46,6 @@ public class LoginPresenterImpTest {
     LoginView view;
     @Mock
     LoginInterpreter loginInterpreter;
-    @Mock
-    User user;
     LoginPresenterImp presenter;
 
     @Before
