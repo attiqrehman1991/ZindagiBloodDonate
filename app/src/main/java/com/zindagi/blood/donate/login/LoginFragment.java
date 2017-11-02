@@ -27,6 +27,7 @@ import android.text.SpannableString;
 import android.text.style.StyleSpan;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.zindagi.blood.donate.R;
 import com.zindagi.blood.donate.base.helps.OSHelper;
@@ -57,8 +58,38 @@ public class LoginFragment extends BaseFragment implements LoginView {
     private Button button_login;
 
     @Override
-    public void showMessage(int code) {
+    public String getEmail() {
+        return et_email.getText().toString();
+    }
 
+    @Override
+    public String getPassword() {
+        return et_password.getText().toString();
+    }
+
+    @Override
+    public void successfullyLoggedIn() {
+        Toast.makeText(activity, getString(R.string.successfully_logged_in), Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void requiredPassword() {
+        Toast.makeText(activity, getString(R.string.enter_password), Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void requiredEmail() {
+        Toast.makeText(activity, getString(R.string.enter_email), Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void emailNotValid() {
+        Toast.makeText(activity, getString(R.string.email_not_valid), Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void passwordNotValid() {
+        Toast.makeText(activity, getString(R.string.password_not_valid), Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -67,7 +98,7 @@ public class LoginFragment extends BaseFragment implements LoginView {
             case R.id.button_login:
                 if (OSHelper.isInternetAvailable(activity)) {
                     if (validateInput())
-                        presenter.attemptLogin(et_email.getText().toString(), et_password.getText().toString());
+                        presenter.attemptLogin();
                     else
                         UIHelper.showToast(getActivity().getApplicationContext(), activity.getString(R.string.invalid_username_or_password), 2);
                 } else

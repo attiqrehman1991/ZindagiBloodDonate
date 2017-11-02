@@ -31,7 +31,19 @@ import com.zindagi.blood.donate.login.model.UserInfo;
  */
 
 public interface LoginView extends BasicInterface {
-    void showMessage(int code);
+    void successfullyLoggedIn();
+
+    String getPassword();
+
+    String getEmail();
+
+    void requiredPassword();
+
+    void requiredEmail();
+
+    void emailNotValid();
+
+    void passwordNotValid();
 
     void loginResults(UserInfo userInfo);
 }

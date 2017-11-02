@@ -21,6 +21,8 @@
 
 package com.zindagi.blood.donate.login;
 
+import android.util.Patterns;
+
 import com.zindagi.blood.donate.R;
 import com.zindagi.blood.donate.database.HospitalTable;
 import com.zindagi.blood.donate.database.NotificationTable;
@@ -32,6 +34,7 @@ import com.zindagi.blood.donate.requestBlood.model.Hospital;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Pattern;
 
 /**
  * Created by Attiq ur Rehman on 08 Oct 2017.
@@ -58,13 +61,46 @@ public class LoginPresenterImp implements LoginPresenter {
     }
 
     @Override
-    public void attemptLogin(final String username, final String password) {
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                doLogin(username, password);
-            }
-        }).start();
+    public boolean isEmailValid(String email) {
+        String EMAIL_PATTERN = "(?:.+)(?:[^\\%\\^\\)\\(]*)(?:\\@)(?:.+)(?:[^\\%\\^\\)\\(]*)(?:\\.)(?:[^\\%\\^\\)\\(]*)(?:.+)";
+        return Pattern.compile(EMAIL_PATTERN).matcher(email).matches();
+    }
+
+    @Override
+    public boolean isPasswordValid(String password) {
+        String PASSWORD_PATTERN = "(?=.*[A-Z]).{6,23}";
+        return Pattern.compile(PASSWORD_PATTERN).matcher(password).matches();
+    }
+
+    @Override
+    public void attemptLogin() {
+        final String email = view.getEmail();
+        final String password = view.getPassword();
+        if (email.isEmpty()) {
+            view.requiredEmail();
+            return;
+        }
+        if (!isEmailValid(email)) {
+            view.emailNotValid();
+            return;
+        }
+        if (password.isEmpty()) {
+            view.requiredPassword();
+            return;
+        }
+        if (!isPasswordValid(password)) {
+            view.passwordNotValid();
+            return;
+        }
+        view.successfullyLoggedIn();
+
+
+//        new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//                doLogin(username, password);
+//            }
+//        }).start();
     }
 
     private void doLogin(final String username, final String password) {
@@ -125,31 +161,31 @@ public class LoginPresenterImp implements LoginPresenter {
         notificationList.add(notification);
 
         // Need to load according to your requirements
-        List<Hospital> hospitalList= new ArrayList<>();
-        Hospital hospital= new Hospital();
+        List<Hospital> hospitalList = new ArrayList<>();
+        Hospital hospital = new Hospital();
         hospital.setHospitalID(1);
         hospital.setHospitalName("Ganga Ram");
         hospital.setPlace("Lahore");
         hospitalList.add(hospital);
 
-        hospital= new Hospital();
+        hospital = new Hospital();
         hospital.setHospitalID(2);
         hospital.setHospitalName("Jinnah");
         hospital.setPlace("Lahore");
 
-        hospital= new Hospital();
+        hospital = new Hospital();
         hospital.setHospitalID(3);
         hospital.setHospitalName("National");
         hospital.setPlace("Lahore");
         hospitalList.add(hospital);
 
-        hospital= new Hospital();
+        hospital = new Hospital();
         hospital.setHospitalID(4);
         hospital.setHospitalName("Sharif");
         hospital.setPlace("Lahore");
         hospitalList.add(hospital);
 
-        HospitalTable hospitalTable= new HospitalTable();
+        HospitalTable hospitalTable = new HospitalTable();
         hospitalTable.insertData(hospitalList);
 
         NotificationTable notificationTable = new NotificationTable();

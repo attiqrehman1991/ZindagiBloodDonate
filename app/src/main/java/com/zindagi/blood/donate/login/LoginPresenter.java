@@ -33,5 +33,9 @@ public interface LoginPresenter {
 
     void fetchUserDetail();
 
-    void attemptLogin(String username, String password);
+    void attemptLogin();
+
+    boolean isEmailValid(String email);
+
+    boolean isPasswordValid(String password);
 }
