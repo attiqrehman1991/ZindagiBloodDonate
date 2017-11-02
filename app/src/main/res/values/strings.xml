@@ -42,6 +42,7 @@
     <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="successfully_logged_in">Successfully logged in</string>
+    <string name="failed_to_logged_in">Failed to logged in</string>
     <string name="save">Save</string>
     <string name="ta_da">TA/DA</string>
     <string name="request_blood">Request Blood</string>

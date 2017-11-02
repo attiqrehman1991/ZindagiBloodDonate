@@ -19,26 +19,29 @@
  * OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.zindagi.blood.donate.login.dagger;
+package com.zindagi.blood.donate.login.dataLayer;
 
-import com.zindagi.blood.donate.login.mvp.LoginPresenter;
-import com.zindagi.blood.donate.login.mvp.LoginPresenterImp;
-
-import javax.inject.Singleton;
-
-import dagger.Module;
-import dagger.Provides;
+import org.json.JSONObject;
 
 /**
- * Created by Attiq ur Rehman on 08 Oct 2017.
- * Senior Software Engineer at Systems Ltd
- * attiq.ur.rehman1991@gmail.com
+ * Created by Chilindo User on 11/2/2017 AD.
  */
-@Module
-public class LoginPresenterModule {
-    @Provides
-    @Singleton
-    LoginPresenter provideLoginPresenter() {
-        return new LoginPresenterImp();
+
+public class LoginRetrofitService implements LoginService {
+    @Override
+    public void doLogin(PostServiceCallBack callBack, String email, String password) {
+        // retrofit call
+        JSONObject jsonObject = new JSONObject();
+        try {
+            jsonObject.put("name", "name");
+            jsonObject.put("age", "27");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        if (email.equalsIgnoreCase("attiq@gmail.com"))
+            callBack.onFailure(jsonObject);
+        else
+            callBack.onSuccess(jsonObject);
     }
 }

@@ -19,25 +19,39 @@
  * OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.zindagi.blood.donate.login;
+package com.zindagi.blood.donate.login.mvp;
 
-import org.json.JSONObject;
+import android.app.Activity;
+import android.content.Context;
+
+import com.zindagi.blood.donate.admin.model.User;
+import com.zindagi.blood.donate.base.ui.BasicInterface;
+import com.zindagi.blood.donate.login.model.UserInfo;
 
 /**
- * Created by Chilindo User on 11/2/2017 AD.
+ * Created by Attiq ur Rehman on 08 Oct 2017.
+ * Senior Software Engineer at Systems Ltd
+ * attiq.ur.rehman1991@gmail.com
  */
 
-public class LoginRetrofitService implements LoginService {
-    @Override
-    public void doLogin(PostServiceCallBack callBack, String email, String password) {
-        try {
-            JSONObject jsonObject = new JSONObject();
-            jsonObject.put("name", "name");
-            jsonObject.put("age", "27");
+public interface LoginView extends BasicInterface {
+    void successfullyLoggedIn();
 
-            callBack.onSuccess(jsonObject);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+    void failedToLoggedIn();
+
+    String getPassword();
+
+    String getEmail();
+
+    Activity getActivity();
+
+    void requiredPassword();
+
+    void requiredEmail();
+
+    void emailNotValid();
+
+    void passwordNotValid();
+
+    void loginResults(UserInfo userInfo);
 }

@@ -25,7 +25,7 @@ import com.zindagi.blood.donate.admin.AdminFragment;
 import com.zindagi.blood.donate.admin.dagger.AdminPresenterModule;
 import com.zindagi.blood.donate.home.HomeFragment;
 import com.zindagi.blood.donate.home.dagger.HomePresenterModule;
-import com.zindagi.blood.donate.login.LoginFragment;
+import com.zindagi.blood.donate.login.mvp.LoginFragment;
 import com.zindagi.blood.donate.login.dagger.LoginPresenterModule;
 import com.zindagi.blood.donate.notification.NotificationFragment;
 import com.zindagi.blood.donate.notification.dagger.NotificationPresenterModule;

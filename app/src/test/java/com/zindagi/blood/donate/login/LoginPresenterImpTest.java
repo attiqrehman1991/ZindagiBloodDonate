@@ -21,18 +21,18 @@
 
 package com.zindagi.blood.donate.login;
 
-import com.zindagi.blood.donate.R;
-import com.zindagi.blood.donate.login.model.LoginResponse;
+import com.zindagi.blood.donate.admin.model.User;
+import com.zindagi.blood.donate.login.dataLayer.LoginService;
+import com.zindagi.blood.donate.login.mvp.LoginPresenterImp;
+import com.zindagi.blood.donate.login.mvp.LoginView;
 
 import org.json.JSONObject;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 
-import static org.junit.Assert.*;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -45,13 +45,15 @@ public class LoginPresenterImpTest {
     @Mock
     LoginView view;
     @Mock
-    LoginService service;
+    LoginInterpreter loginInterpreter;
+    @Mock
+    User user;
     LoginPresenterImp presenter;
 
     @Before
     public void setUp() throws Exception {
         this.presenter = new LoginPresenterImp();
-        this.presenter.setView(view, service);
+        this.presenter.setView(view, loginInterpreter);
     }
 
     @Test
@@ -118,15 +120,19 @@ public class LoginPresenterImpTest {
         verify(view).passwordNotValid();
     }
 
-    @Mock
-    JSONObject jsonObject;
-
     @Test
-    public void test034() throws Exception {
+    public void test040() throws Exception {
         when(view.getEmail()).thenReturn("attiq@gmail.com");
         when(view.getPassword()).thenReturn("mkyong1A@");
         presenter.attemptLogin();
+        verify(view).failedToLoggedIn();
+    }
 
-        verify(view).successfullyLoggedIn(jsonObject);
+    @Test
+    public void test041() throws Exception {
+        when(view.getEmail()).thenReturn("attiq@chilindo.com");
+        when(view.getPassword()).thenReturn("mkyong1A@");
+        presenter.attemptLogin();
+        verify(view).successfullyLoggedIn();
     }
 }

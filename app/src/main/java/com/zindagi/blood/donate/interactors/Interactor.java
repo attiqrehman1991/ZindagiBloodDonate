@@ -19,19 +19,17 @@
  * OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.zindagi.blood.donate.login;
+package com.zindagi.blood.donate.interactors;
 
 /**
- * Created by Chilindo User on 11/2/2017 AD.
+ * Created by ChilindoUser on 11/2/2017 AD.
  */
 
-public interface LoginService {
+public interface Interactor {
 
-    interface PostServiceCallBack<T> {
+    interface InteractorCallBack<T> {
         void onSuccess(T posts);
 
         void onFailure(T posts);
     }
-
-    void doLogin(PostServiceCallBack callBack, String email, String password);
 }

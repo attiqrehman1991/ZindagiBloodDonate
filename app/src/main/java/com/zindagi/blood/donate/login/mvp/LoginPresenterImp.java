@@ -19,20 +19,20 @@
  * OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.zindagi.blood.donate.login;
-
-import android.util.Patterns;
+package com.zindagi.blood.donate.login.mvp;
 
 import com.zindagi.blood.donate.R;
 import com.zindagi.blood.donate.database.HospitalTable;
 import com.zindagi.blood.donate.database.NotificationTable;
 import com.zindagi.blood.donate.database.UserProfileTable;
+import com.zindagi.blood.donate.interactors.Interactor;
+import com.zindagi.blood.donate.login.LoginInterpreter;
+import com.zindagi.blood.donate.login.dataLayer.LoginRetrofitService;
+import com.zindagi.blood.donate.login.dataLayer.LoginService;
 import com.zindagi.blood.donate.login.model.LoginRequest;
 import com.zindagi.blood.donate.login.model.UserInfo;
 import com.zindagi.blood.donate.notification.model.Notification;
 import com.zindagi.blood.donate.requestBlood.model.Hospital;
-
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,12 +46,12 @@ import java.util.regex.Pattern;
 
 public class LoginPresenterImp implements LoginPresenter {
     private LoginView view;
-    private LoginService service;
+    private LoginInterpreter interactor;
 
     @Override
-    public void setView(LoginView view, LoginService service) {
+    public void setView(LoginView view, LoginInterpreter interactor) {
         this.view = view;
-        this.service = service;
+        this.interactor = interactor;
     }
 
     @Override
@@ -97,26 +97,18 @@ public class LoginPresenterImp implements LoginPresenter {
             return;
         }
 
-        service = new LoginRetrofitService();
-        service.doLogin(new LoginService.PostServiceCallBack() {
+        interactor = new LoginInterpreter();
+        interactor.doLogin(new Interactor.InteractorCallBack() {
             @Override
             public void onSuccess(Object posts) {
-                view.successfullyLoggedIn(posts);
+                view.successfullyLoggedIn();
             }
 
             @Override
             public void onFailure(Object posts) {
-
+                view.failedToLoggedIn();
             }
-        }, email, password);
-
-
-//        new Thread(new Runnable() {
-//            @Override
-//            public void run() {
-//                doLogin(username, password);
-//            }
-//        }).start();
+        }, email, password, view.getActivity());
     }
 
     private void doLogin(final String username, final String password) {

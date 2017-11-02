@@ -41,7 +41,7 @@ import com.zindagi.blood.donate.R;
 import com.zindagi.blood.donate.base.view.AnyToolbarManager;
 import com.zindagi.blood.donate.base.view.SimpleProgress;
 import com.zindagi.blood.donate.home.HomeFragment;
-import com.zindagi.blood.donate.login.LoginFragment;
+import com.zindagi.blood.donate.login.mvp.LoginFragment;
 
 import java.util.HashMap;
 import java.util.Stack;

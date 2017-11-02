@@ -19,7 +19,10 @@
  * OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.zindagi.blood.donate.login;
+package com.zindagi.blood.donate.login.mvp;
+
+import com.zindagi.blood.donate.interactors.Interactor;
+import com.zindagi.blood.donate.login.LoginInterpreter;
 
 /**
  * Created by Attiq ur Rehman on 08 Oct 2017.
@@ -27,7 +30,7 @@ package com.zindagi.blood.donate.login;
  * attiq.ur.rehman1991@gmail.com
  */
 public interface LoginPresenter {
-    void setView(LoginView view, LoginService loginService);
+    void setView(LoginView view, LoginInterpreter interactor);
 
     void checkAlreadyLoggedIn();
 

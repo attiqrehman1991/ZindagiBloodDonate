@@ -19,7 +19,7 @@
  * OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.zindagi.blood.donate.login;
+package com.zindagi.blood.donate.login.mvp;
 
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -30,6 +30,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.zindagi.blood.donate.R;
+import com.zindagi.blood.donate.admin.model.User;
 import com.zindagi.blood.donate.base.helps.OSHelper;
 import com.zindagi.blood.donate.base.helps.UIHelper;
 import com.zindagi.blood.donate.base.ui.BaseApplication;
@@ -37,9 +38,9 @@ import com.zindagi.blood.donate.base.ui.BaseFragment;
 import com.zindagi.blood.donate.base.view.AnyEditText;
 import com.zindagi.blood.donate.base.view.AnyTextView;
 import com.zindagi.blood.donate.home.HomeFragment;
+import com.zindagi.blood.donate.interactors.Interactor;
+import com.zindagi.blood.donate.login.LoginInterpreter;
 import com.zindagi.blood.donate.login.model.UserInfo;
-
-import org.json.JSONObject;
 
 import javax.inject.Inject;
 
@@ -53,7 +54,7 @@ public class LoginFragment extends BaseFragment implements LoginView {
 
     @Inject
     LoginPresenter presenter;
-    LoginService loginService;
+    LoginInterpreter interactor;
     private AnyTextView tv_forget;
     private AnyTextView tv_sign_up;
     private AnyEditText et_email;
@@ -71,8 +72,13 @@ public class LoginFragment extends BaseFragment implements LoginView {
     }
 
     @Override
-    public void successfullyLoggedIn(Object object) {
+    public void successfullyLoggedIn() {
         Toast.makeText(activity, getString(R.string.successfully_logged_in), Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void failedToLoggedIn() {
+        Toast.makeText(activity, getString(R.string.failed_to_logged_in), Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -142,7 +148,7 @@ public class LoginFragment extends BaseFragment implements LoginView {
 
     @Override
     public void fragmentData(View parent, Bundle savedInstanceState) {
-        presenter.setView(this, loginService);
+        presenter.setView(this, interactor);
         presenter.checkAlreadyLoggedIn();
     }
 

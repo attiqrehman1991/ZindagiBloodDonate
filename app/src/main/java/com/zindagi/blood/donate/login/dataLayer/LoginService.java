@@ -19,31 +19,19 @@
  * OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.zindagi.blood.donate.login;
-
-import com.zindagi.blood.donate.base.ui.BasicInterface;
-import com.zindagi.blood.donate.login.model.UserInfo;
+package com.zindagi.blood.donate.login.dataLayer;
 
 /**
- * Created by Attiq ur Rehman on 08 Oct 2017.
- * Senior Software Engineer at Systems Ltd
- * attiq.ur.rehman1991@gmail.com
+ * Created by Chilindo User on 11/2/2017 AD.
  */
 
-public interface LoginView extends BasicInterface {
-    void successfullyLoggedIn(Object object);
+public interface LoginService {
 
-    String getPassword();
+    interface PostServiceCallBack<T> {
+        void onSuccess(T posts);
 
-    String getEmail();
+        void onFailure(T posts);
+    }
 
-    void requiredPassword();
-
-    void requiredEmail();
-
-    void emailNotValid();
-
-    void passwordNotValid();
-
-    void loginResults(UserInfo userInfo);
+    void doLogin(PostServiceCallBack callBack, String email, String password);
 }
