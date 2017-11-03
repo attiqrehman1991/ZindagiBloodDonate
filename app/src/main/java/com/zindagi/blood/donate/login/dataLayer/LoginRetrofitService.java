@@ -27,7 +27,8 @@ import org.json.JSONObject;
  * Created by Chilindo User on 11/2/2017 AD.
  */
 
-public class LoginRetrofitService implements LoginService {
+public class
+LoginRetrofitService implements LoginService {
     @Override
     public void doLogin(PostServiceCallBack callBack, String email, String password) {
         // retrofit call
