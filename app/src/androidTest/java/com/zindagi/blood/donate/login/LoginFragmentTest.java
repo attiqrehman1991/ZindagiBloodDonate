@@ -48,7 +48,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.withId;
 public class LoginFragmentTest {
 
     @Rule
-    public ActivityTestRule activityTestRule = new ActivityTestRule(BaseActivity.class);
+    public ActivityTestRule<BaseActivity> activityTestRule = new ActivityTestRule(BaseActivity.class);
     private String email;
     private String password;
 
